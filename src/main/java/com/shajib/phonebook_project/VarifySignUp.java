@@ -20,10 +20,10 @@ import javax.mail.internet.MimeMessage;
 import javax.swing.JOptionPane;
 
 public class VarifySignUp extends javax.swing.JFrame {
-    private String message = "Your OTP: ";
-    private String subject = "OTP for Password Reset";
+    private String message = "Your Phonebook SignUp OTP : ";
+    private String subject = "OTP for SignUp";
     private String to = "";
-    private String from = "shajib.cse.53@gmail.com";
+    private String from = "md.shajib.ce21053@gmail.com";
     
     //Email and password from LoginUI.java
     LoginUI obj = new LoginUI();

@@ -28,7 +28,7 @@ import javax.swing.JOptionPane;
 public class ForgotPassword extends javax.swing.JFrame {
     public static String e;
     
-    private String message = "Your OTP: ";
+    private String message = "Your Phonebook password reset OTP: ";
     private String subject = "OTP for Password Reset";
     private String to = "";
     private String from = "shajib.cse.53@gmail.com";
