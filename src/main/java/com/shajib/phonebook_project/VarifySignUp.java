@@ -209,13 +209,17 @@ public class VarifySignUp extends javax.swing.JFrame {
         if(o.equals(generated_otp)){
                 dispose();
             try {
+                String sql = "CALL login_insert(?, ?)";
                 Connection connection = ConnectDB.getConnection();
-                String sql = "CALL login_insert(?,?)";
                 PreparedStatement statement = connection.prepareStatement(sql);
-                statement.setString(1,email);
-                statement.setString(2, pass);
                 
-                JOptionPane.showMessageDialog(this, "Sign UP Successfull.", "Success", JOptionPane.INFORMATION_MESSAGE); 
+                statement.setString(1,email);
+                statement.setString(2,pass);
+                
+                statement.executeUpdate();
+                
+                
+                JOptionPane.showMessageDialog(this, "Sign UP Successfull. " + email + " " + pass , "Success", JOptionPane.INFORMATION_MESSAGE); 
                 
                 //Call the login UI
                 java.awt.EventQueue.invokeLater(() -> {
